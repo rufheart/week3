@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.div-header{
+    display: flex;border: 1px solid red;
+    height: 60px;
+    display: flex;
+}
+.div-header-left{
+    padding-left: 20px;
+    border: 1px solid red;
+}
+.div-header-right{
+    border: 1px solid red;
+    justify-self: right;
+}
+.div-header-middle{
+    display: none;
+}
+@media(max-width:720px){
+    .div-header-middle{
+        display: block
+    }
+}
