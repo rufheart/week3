@@ -5,23 +5,99 @@
 }
 
 .div-header{
-    display: flex;border: 1px solid red;
+    display: flex;border: 1px solid black;
     height: 60px;
     display: flex;
+    background-color: #999999;
 }
 .div-header-left{
     padding-left: 20px;
-    border: 1px solid red;
+    width: 20%;
+}
+.div-header-left>a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    padding-left: 20px;
 }
 .div-header-right{
-    border: 1px solid red;
-    justify-self: right;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: right;
+}
+.div-header-right>a{
+    margin: 10px;
+    display: flex;
+    text-decoration: none;
+}
+.div-header-right>a>i{
+    display: flex;
+}
+.div-header-right>a>span{
+    padding-top: 15px;
+    color: black;
 }
 .div-header-middle{
     display: none;
 }
+.div-middle>div>button{
+    height: 30px;
+    width: 100%;
+}
+.div-body-header{
+    display: flex;
+    justify-content: center;
+}
+.div-body-body{
+    display: flex;
+}
+.div-body-body>div{
+    margin: 20px;
+    background-color: #999999;
+    padding: 10px;
+}
+.div-body-body>div>p:nth-child(1){
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+@media(min-width:1024px){
+    .div-header-middle{
+        display: none
+    }
+
+}
 @media(max-width:720px){
+    .div-header-left{
+        min-width: 50%;
+    }
     .div-header-middle{
         display: block
     }
+    .div-header-right{
+        display: none;
+    }
+    .div-body-body{
+        flex-direction: column;
+    }
+    .div-header-middle{
+        width: 50%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-right: 20px;
+    }
+    .div-header-middle>button{
+        height: 80%;
+        width: 20%;
+        border: none;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    
 }
